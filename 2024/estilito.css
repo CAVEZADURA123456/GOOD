@@ -4,6 +4,11 @@ body {
     padding: 0;
     background-color: #e0f7fa;
     color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 header {
@@ -11,60 +16,59 @@ header {
     color: white;
     text-align: center;
     padding: 1em 0;
+    width: 100%;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 2.5em;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 main {
     padding: 2em;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#cocktail-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2em;
     justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
-.cocktail {
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
     background-color: #ffffff;
-    border: 2px solid #00796b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px;
+}
+
+th, td {
+    padding: 1em;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #00796b;
+    color: white;
     text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.cocktail:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.cocktail img {
-    width: 100%;
-    border-bottom: 2px solid #00796b;
-}
-
-.cocktail h2 {
-    font-size: 1.5em;
-    margin: 0.5em 0;
-    color: #00796b;
-}
-
-.cocktail p {
-    font-size: 1em;
-    padding: 0 1em 1em;
+td {
     color: #555;
+}
+
+section img {
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+section img:hover {
+    transform: scale(1.1);
 }
 
 footer {
@@ -72,8 +76,6 @@ footer {
     color: white;
     text-align: center;
     padding: 1em 0;
-    position: fixed;
-    bottom: 0;
     width: 100%;
 }
 
@@ -81,5 +83,3 @@ footer p {
     margin: 0;
     font-size: 0.9em;
 }
-
-
