@@ -16,7 +16,10 @@
             </tr>
             <tr>
                 <td colspan="2" style="text-align: center;">
+                    <!-- Imagen original -->
                     <img id="image" src="" alt="Goku" width="200">
+                    <!-- Imagen duplicada -->
+                    <img id="image-duplicate" src="" alt="Goku Duplicate" width="200">
                 </td>
             </tr>
             <tr>
@@ -61,6 +64,7 @@
 
                 document.getElementById("name").textContent = data.name;
                 document.getElementById("image").src = data.image;
+                document.getElementById("image-duplicate").src = data.image;  <!-- Asignando la misma imagen a la imagen duplicada -->
                 document.getElementById("race").textContent = data.race;
                 document.getElementById("gender").textContent = data.gender;
                 document.getElementById("height").textContent = data.height;
